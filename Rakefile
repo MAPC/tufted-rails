@@ -24,6 +24,7 @@ task :update do
   system("git status")
 
   puts "\n"
+  # TODO: probably package.json
   puts "tufted version:       #{JSON.parse(File.read('./tufted-src/component.json'))['version']}"
   puts "tufted-rails version: #{TuftedRails::Rails::VERSION}"
 end

@@ -1,6 +1,10 @@
-# Bootstrap Typeahead for Rails
+# Tufted JS for Rails
 
-tufted-rails integrates [Tufted.js][tufted] by [allthesignals][https://github.com/allthesignals] with the Rails 3 assets pipeline.
+### Terse D3 Charts
+
+tufted-rails integrates [Tufted.js][tufted] by [allthesignals](https://github.com/allthesignals) with the Rails 3 assets pipeline.
+
+[tufted]: https://github.com/MAPC/tufted.js
 
 http://github.com/mapc/tufted-rails
 
