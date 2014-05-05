@@ -1,4 +1,4 @@
-bootstrap-typeahead-src
+tufted-src
 *.gem
 Gemfile.lock
-bootstrap-typeahead-css-src
+tufted-css-src

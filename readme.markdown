@@ -1,27 +1,27 @@
 # Bootstrap Typeahead for Rails
 
-[![Gem Version](https://badge.fury.io/rb/bootstrap-typeahead-rails.png)](http://badge.fury.io/rb/bootstrap-typeahead-rails)
+[![Gem Version](https://badge.fury.io/rb/tufted-rails.png)](http://badge.fury.io/rb/tufted-rails)
 
-[![endorse](https://api.coderwall.com/nerian/endorsecount.png)](https://coderwall.com/nerian)
+[![endorse](https://api.coderwall.com/beechnut/endorsecount.png)](https://coderwall.com/beechnut)
 
-bootstrap-typeahead-rails project integrates the official typeahead plugin with Rails 3 assets pipeline.
+tufted-rails project integrates the official typeahead plugin with Rails 3 assets pipeline.
 
-http://github.com/Nerian/bootstrap-typeahead-rails
+http://github.com/beechnut/tufted-rails
 
 https://github.com/twitter/typeahead.js/
 
 ## Rails > 3.1
-Include bootstrap-typeahead-rails in Gemfile;
+Include tufted-rails in Gemfile;
 
 ``` ruby
-gem 'bootstrap-typeahead-rails'
+gem 'tufted-rails'
 ```
 
 or you can install from latest build;
 
 ``` ruby
-gem 'bootstrap-typeahead-rails', :require => 'bootstrap-typeahead-rails',
-                              :git => 'git://github.com/Nerian/bootstrap-typeahead-rails.git'
+gem 'tufted-rails', :require => 'tufted-rails',
+                              :git => 'git://github.com/beechnut/tufted-rails.git'
 ```
 
 and run bundle install.
@@ -31,16 +31,16 @@ and run bundle install.
 Add this line to `app/assets/javascripts/application.js`
 
 ``` javascript
-//= require bootstrap-typeahead-rails
+//= require tufted-rails
 ```
 
 The official Typeahead do not include any styling for it. Nonetheless, you can add this line to `app/assets/stylesheets/application.css` and you will get a nice one. Or don't, and implement your own – instructions on https://github.com/twitter/typeahead.js/#look-and-feel.
 
 ``` javascript
-*= require bootstrap-typeahead-rails
+*= require tufted-rails
 ```
 
-## Using bootstrap-typeahead-rails
+## Using tufted-rails
 
 See https://github.com/twitter/typeahead.js/#usage
 

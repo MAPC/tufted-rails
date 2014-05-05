@@ -1,45 +1,44 @@
 #!/usr/bin/env rake
 
 require 'json'
-require File.expand_path('../lib/bootstrap-typeahead-rails/version', __FILE__)
+require File.expand_path('../lib/tufted-rails/version', __FILE__)
 
 desc "Update assets"
 task :update do
-  if Dir.exist?('bootstrap-typeahead-src')
-    system("cd bootstrap-typeahead-src && git pull && cd ..")
+  if Dir.exist?('tufted-src')
+    system("cd tufted-src && git pull && cd ..")
   else
-    system("git clone git@github.com:twitter/typeahead.js.git bootstrap-typeahead-src")
+    system("git clone git@github.com:allthesignals/tufted.js.git tufted-src")
   end
 
-  if Dir.exist?('bootstrap-typeahead-css-src')
-    system("cd bootstrap-typeahead-css-src && git pull && cd ..")
+  if Dir.exist?('tufted-css-src')
+    system("cd tufted-css-src && git pull && cd ..")
   else
-    system("git clone git@github.com:jharding/typeahead.js-bootstrap.css.git bootstrap-typeahead-css-src")
+    system("git clone git@github.com:jharding/tufted.js-tufted.css.git tufted-css-src")
   end
 
-  system("cp bootstrap-typeahead-src/dist/typeahead.js vendor/assets/javascripts/bootstrap-typeahead-rails/bootstrap-typeahead.js")
+  system("cp tufted-src/dist/tufted.js vendor/assets/javascripts/tufted-rails/tufted.js")
 
-  system("cp bootstrap-typeahead-css-src/typeahead.js-bootstrap.css vendor/assets/stylesheets/bootstrap-typeahead-rails/bootstrap-typeahead.css")
-  # system("cp bootstrap-typeahead-css-src/typeahead.js-bootstrap.less vendor/assets/stylesheets/bootstrap-typeahead-rails/bootstrap-typeahead.less")
+  system("cp tufted-css-src/tufted.js-tufted.css vendor/assets/stylesheets/tufted-rails/tufted.css")
 
   system("git status")
 
   puts "\n"
-  puts "bootstrap-typeahead version:       #{JSON.parse(File.read('./bootstrap-typeahead-src/component.json'))['version']}"
-  puts "bootstrap-typeahead-rails version: #{BootstrapTypeaheadRails::Rails::VERSION}"
+  puts "tufted version:       #{JSON.parse(File.read('./tufted-src/component.json'))['version']}"
+  puts "tufted-rails version: #{TuftedRails::Rails::VERSION}"
 end
 
 desc "Build"
 task "build" do
-  system("gem build bootstrap-typeahead-rails.gemspec")
+  system("gem build tufted-rails.gemspec")
 end
 
 desc "Build and publish the gem"
 task :publish => :build do
   tags = `git tag`.split
-  current_version = BootstrapTypeaheadRails::Rails::VERSION
+  current_version = TuftedRails::Rails::VERSION
   system("git tag -a #{current_version} -m 'Release #{current_version}'") unless tags.include?(current_version)
-  system("gem push bootstrap-typeahead-rails-#{current_version}.gem")
+  system("gem push tufted-rails-#{current_version}.gem")
   system("git push --follow-tags")
 end
 
