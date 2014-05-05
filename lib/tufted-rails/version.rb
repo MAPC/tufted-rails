@@ -1,5 +1,5 @@
-module BootstrapTypeaheadRails
+module TuftedRails
   module Rails
-    VERSION = "0.9.3.3"
+    VERSION = "0.0.1"
   end
 end

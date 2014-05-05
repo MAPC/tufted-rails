@@ -1,4 +1,7 @@
-tufted-src
 *.gem
 Gemfile.lock
+
+.DS_Store
+
 tufted-css-src
+tufted-src

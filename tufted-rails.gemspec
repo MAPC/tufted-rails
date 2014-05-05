@@ -6,7 +6,7 @@ Gem::Specification.new do |gem|
   gem.email         = ["mcloyd@gmail.com"]
   gem.description   = "Terse D3 Charts for Rails"
   gem.homepage      = "https://github.com/mapc/tufted-rails"
-  gem.summary       = "Load Tufted.js (by allthesignals) into Rails"
+  gem.summary       = "Load Tufted.js (by allthesignals) into Rails asset pipeline"
   gem.license       = 'MIT'
 
   gem.name          = "tufted-rails"
