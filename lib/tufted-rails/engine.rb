@@ -1,4 +1,4 @@
-module BootstrapTypeaheadRails
+module TuftedRails
   module Rails
     class Engine < ::Rails::Engine
     end

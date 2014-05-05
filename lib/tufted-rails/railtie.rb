@@ -1,4 +1,4 @@
-module BootstrapTypeaheadRails
+module TuftedRails
   module Rails
     class Railtie < ::Rails::Railtie; end
   end
